@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.card{
+    width: 8%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: width 0.65s ease-in;
+}
+
+.card .image{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.card .text{
+    position: absolute;
+    left: 6%;
+    bottom: 4%;
+    color: white;
+    font-size: 1.25em;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+}
+
+.active-card{
+    width: 68% !important;
+}
+
+.active-text{
+    display: unset !important;
+}
