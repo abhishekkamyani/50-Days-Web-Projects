@@ -1,5 +1,4 @@
 let cards = document.querySelectorAll('.card');
-// let texts = document.querySelectorAll('text');
 
 Array.from(cards).forEach((card, indexA) => {
     card.addEventListener('click', () => {
