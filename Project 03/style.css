@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fafafa;
+    font-family: sans-serif;
+    color: #222222;
+    background-color: #333333;
+}
+
+
+/* article */
+.container{
+    overflow: hidden;
+}
+
+article{
+    padding: 100px 130px;
+    background-color: #ffffff;
+    transition: transform 0.5s linear;
+}
+
+article h1{
+    font-size: 32px;
+}
+
+article small{
+    color: #555555;
+    font-style: italic;
+}
+
+article p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-block: 19px;
+    color: #333333;
+}
+
+article h2{
+    font-size: 18.72px;
+    margin-block: 19px;
+}
+
+.image{
+    width: 100%;
+}
+
+.image img{
+    width: 100%;
+}
+
+/* circle of nav */
+#circle-container{
+    z-index: 1000;
+    width: 100px;
+    height: 100px;
+    background-color: #ff7979;
+    color: #ffffff;
+    border-bottom-right-radius: 100%;
+    position: fixed;
+    font-size: 1.7em;
+}
+
+#circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s linear;
+}
+
+.circle-show{
+    transform: rotate(-45deg) translate(2em,-2.2em);
+}
+
+#circle-open, #circle-close{
+    cursor: pointer;
+    position: absolute;
+}
+
+#circle-open{
+    margin-top: 40%;
+    margin-left: 20%;
+}
+
+#circle-close{
+    transform: rotate(45deg);
+    left: -30%;
+    bottom: -5%;
+}
+
+
+.rotate-article{
+    transform: rotate(-10deg) translate(12em,-9.5em);
+}
+
+
+/* nav */
+.menu{
+    position: absolute;
+    top: 70vh;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.menu ul{
+    padding-inline: 1em;
+    height: 200px;
+    position: fixed;
+    z-index: -1000;
+}
+
+.menu ul li{
+    display: flex;
+    gap: 1em;
+    justify-content: space-evenly;
+    position: absolute;
+    left: -300%;
+    transition: all 0.3s linear;
+}
+
+
+@media (width < 1024px) {
+    article{
+        padding: 100px 40px;
+    }
+}
