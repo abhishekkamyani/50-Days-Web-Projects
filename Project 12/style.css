@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Muli', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 50px 30px;
+    gap: 30px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 50vw;
+    min-height: 15vh;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.faq h4 {
+    font-size: 1.17em;
+}
+
+.faq p {
+    display: none;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.btn.close {
+    color: grey;
+    display: none;
+    font-size: 30px !important;
+}
+
+.active {
+    background: #ffffff url(bg.png) no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px, rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+}
+
+.active p {
+    display: unset !important;
+}
+
+.active .btn.close {
+    display: block !important;
+}
+
+.active .btn.open {
+    display: none !important;
+}
+
+@media (width < 1200px) {
+    .card {
+        width: 90vw;
+    }
+    .faq h4 {
+        font-size: 1em;
+    }
+}
