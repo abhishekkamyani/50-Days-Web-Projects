@@ -1,0 +1,26 @@
+const remainedSpan = document.querySelector('.remained').querySelector('span');
+const cups = document.querySelectorAll('.cup-small');
+const percentage = document.querySelector('.percentage');
+let count = 0;
+
+cups.forEach((cup, ind) => {
+
+    cup.addEventListener('mousedown', ()=>{
+        if(!cup.classList.contains('full')){
+            count = 0;
+            for (let i = 0; i <= ind; i++) {
+                cups[i].classList.add('full');
+                count += 12.5;
+            }
+        }
+        else{
+            for (let i = ind ; i < cups.length && cups[i].classList.contains('full') ; i++) {
+                cups[i].classList.remove('full');
+                count -= 12.5;
+            }
+        }
+        
+        percentage.style.height = `${count}%`
+        percentage.innerText = count+'%';
+    })
+})
