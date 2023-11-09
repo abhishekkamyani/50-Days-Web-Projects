@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    font-family: 'Heebo', sans-serif;;
+    transition: 0.5s ease;
+}
+
+#toggle{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-size: 13px;
+    border: 0;
+    cursor: pointer;
+}
+
+.clock-container{
+    text-align: center;
+}
+
+.clock{
+    width: 30vw;
+    height: 30vh;
+    margin-block: 0 1em;
+    position: relative;
+    margin-inline: auto;
+}
+
+#time{
+    font-size: 3.5em;
+    font-weight: 300;
+}
+
+.date #dateNow{
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.date #circle{
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 50%;
+    padding: 0px 7px;
+    font-size: 12px;
+}
+
+.needle{
+    position: absolute;
+    width: 3px;
+    height: 70%;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    background-color: black;
+}
+
+#hour{
+    height: 50%;
+    z-index: -2;
+}
+
+#minute{
+    transform: translateX(-50%) rotate(78deg);
+    width: 2.5px;
+    height: 65%;
+    z-index: -1;
+}
+
+#second{
+    transform: translateX(-50%) rotate(180deg);
+    background-color: sienna;
+    border-top: 10px solid black;
+    border-bottom: 5px solid black;
+    width: 2px;
+    background-color: #e74c3c;
+}
+
+
+.center-point{
+    position: absolute;
+    /* background-color: #e74c3c; */
+    border: 4px solid #e74c3c;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+body.dark{
+    background-color: black;
+}
+
+.dark .needle{
+    background-color: #ffffff;
+}
+
+.dark #second{
+    border-color: #ffffff;
+}
+
+.dark #toggle{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark #time{
+    color: #ffffff;
+}
+
+.dark #circle{
+    background-color: #FFFFFF;
+    color: #000000;
+}
